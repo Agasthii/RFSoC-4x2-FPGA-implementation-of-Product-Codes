@@ -50,7 +50,7 @@ Each of these sections was first implemented in a parameterized manner, then har
 The Verilog code is then used to make an AXI peripheral and inserted as an IP block to the block design.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/012ff23d-d497-44be-957b-015f67c0b317" alt="Alt Text" style="width:50%; height:auto;">
+  <img src="https://github.com/user-attachments/assets/5d858be7-a45c-41e2-9a1f-7afa86a9edaa" alt="Alt Text" style="width:50%; height:auto;">
 </p>
 
 The ZYNQ PS is being interacted with using the PYNQ interface to read/write inputs and outputs.
