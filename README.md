@@ -30,6 +30,21 @@ A product code will be encoded and passed to the channel, and the distorted prod
   <img src="https://github.com/user-attachments/assets/21bf5760-af43-49ca-8a09-c6b2da231a6b" alt="Alt Text" style="width:50%; height:auto;">
 </p>
 
+### Decoding process
+
+The decoding process is done in two stages as;
+1. Row decoding
+2. Column decoding
+
+The complex decoding algorithm for BCH codes is implemented in Verilog while fully pipelining for better throughput. The decoding process consists of 4 main stages.
+1. Computing syndrome
+2. Computing coefficients of the Peterson Equation
+3. Chien search
+4. Computing error vectors and counting errors
+5. Correcting errors using the extended parity bit
+
+Each of these sections was first implemented in a parameterized manner, then hardcoded for specific eBCH(256,239,2) Product Codes.
+
 The implementation is done on [RFSoC 4x2](https://www.rfsoc-pynq.io/rfsoc_4x2_overview.html) FPGA board and the [PYNQ interface](https://pynq.readthedocs.io/en/v2.0/overlay_design_methodology/overlay_tutorial.html) is used to communicate with the FPGA board in a virtual manner.
 
 <p align="center">
