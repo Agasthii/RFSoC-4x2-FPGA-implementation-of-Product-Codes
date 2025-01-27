@@ -1,6 +1,12 @@
 # RFSoC-4x2-FPGA-implementation-of-Product-Codes
 
-the implementation of an eBCH(256,239,2) product code encoder and a decoder on an RFSoC4x2 FPGA board is presented. The implementation is optimized to get a low BER rate of 10<sup>-14</sup>, while achieving a high data rate of 76 Gbps.
+In this repository, the implementation of an eBCH(256,239,2) product code encoder and a decoder on an RFSoC4x2 FPGA board is presented. The implementation is optimized to get a low BER rate of 10<sup>-14</sup>, while achieving a high data rate of 76 Gbps.
+
+Forward Error Correction (FEC) techniques, such as block codes, and convolutional codes, make data transmission more efficient by allowing correct errors at the receiver. Bose–Chaudhuri–Hocquenghem (BCH) codes are used in many applications as an FEC technique, due to their lower complexity. The target of the project is achieving a BER of 10<sup>-14</sup> during data transmission. In this project, a high speed FPGA implementation is used to obtain such a low BER value. The FPGA implementation of product codes using extended BCH (eBCH) codes has a code rate of 0.879, and a minimum hamming distance of 36.
+
+Random codewords are generated and fed to the eBCH (256,239) encoder, and a product code is obtained by doing both row encoding and column encoding. The encoded product code is then passed through a Binary Symmetric Channel (BSC) under a defined cross-over probability. The received product code is then fed to the decoder to do iterative Bounded Distance Decoding (iBDD) using the Berlekamp–Massey algorithm. The BER of the transmission is then calculated and given as the output.
+
+The RFSoC 4x2 board can be easily managed using the PYNQ architecture, which allows to define inputs and obtain outputs using the PYNQ interface. Vivado 2023.1 is used as the main software application for the implementation process. 
 
 The basic structure of Bose–Chaudhuri–Hocquenghem (BCH) codes is defined in the following figure.
 
