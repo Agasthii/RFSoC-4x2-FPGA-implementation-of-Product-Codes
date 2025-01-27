@@ -16,28 +16,23 @@ BCH codes are a type of block codes, which uses parity bits to encode the messag
   <img src="https://github.com/user-attachments/assets/8ea7196b-6524-4592-8615-7c989665ecdd" alt="Alt Text" style="width:50%; height:auto;">
 </p>
 
-A single eBCH codeword can be encoded using a single encoder within a single clock cycle. In this design, 32 parallel eBCH (256,239) encoders are used to encode 32 eBCH codewords in a single clock cycle. Therefore, for a product code with k\textsubscript{1} = k\textsubscript{2} = 239, the encoding can be done in 16 clock cycles. For the FPGA implementation with 100 MHz clock frequency, the encoding data rate is 357 Gbps approx.
+A single eBCH codeword can be encoded using a single encoder within a single clock cycle. In this design, 16 parallel eBCH (256,239) encoders are used to encode 16 eBCH codewords in a single clock cycle. Therefore, for a product code with k\textsubscript{1} = k\textsubscript{2} = 239, the row encoding can be done in 15 clock cycles, following the column encoding done in 16 clock cycles. For the FPGA implementation with 100 MHz clock frequency, the encoding data rate is 185 Gbps approx.
 
 ### Channel
 
-A Binary Symmetric Channel (BSC) is used as the channel, with a crossover probability which can be easily defined using the PYNQ interface.
+A Binary Symmetric Channel (BSC) is used as the channel, with a crossover probability that can be easily defined using the PYNQ interface.
 
-In the FPGA implementation,LFSR blocks are used to generate a block of random noise, and 32 LFSRs' are implemented in parallel to generate 32 random noise vectors in a single clock cycle. Therefore, after each 16 clock cycles, a 256x256 noise matrix will be constructed using these noise vectors.
+In the FPGA implementation, LFSR blocks are used to generate a block of random noise, and 16 LFSRs' are implemented in parallel to generate 16 random noise vectors in a single clock cycle. Therefore, after each 16 clock cycles, a 256x256 noise matrix will be constructed using these noise vectors.
 
-Each 16 clock cycle set, a product code will be encoded and passed to the channel, and the distorted product code will be ready to be fed into the decoder when required.
-
-The encoding, and channel transmission can be done using pipe-lining. After encoding and passing the encoded product code to the channel, the encoder can start encoding the next product code.
+A product code will be encoded and passed to the channel, and the distorted product code will be fed into the decoder when required.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/21bf5760-af43-49ca-8a09-c6b2da231a6b" alt="Alt Text" style="width:50%; height:auto;">
 </p>
 
-The implementation is fully pipelined and consists of four main stages.
+### Decoding process
 
-1. Codeword generation
-2. Encoding block
-3. Binary Symmetric Channel
-4. Decoding block
+The decoding process is 
 
 The implementation is done on [RFSoC 4x2](https://www.rfsoc-pynq.io/rfsoc_4x2_overview.html) FPGA board and the [PYNQ interface](https://pynq.readthedocs.io/en/v2.0/overlay_design_methodology/overlay_tutorial.html) is used to communicate with the FPGA board in a virtual manner.
 
