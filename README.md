@@ -30,10 +30,6 @@ A product code will be encoded and passed to the channel, and the distorted prod
   <img src="https://github.com/user-attachments/assets/21bf5760-af43-49ca-8a09-c6b2da231a6b" alt="Alt Text" style="width:50%; height:auto;">
 </p>
 
-### Decoding process
-
-The decoding process is 
-
 The implementation is done on [RFSoC 4x2](https://www.rfsoc-pynq.io/rfsoc_4x2_overview.html) FPGA board and the [PYNQ interface](https://pynq.readthedocs.io/en/v2.0/overlay_design_methodology/overlay_tutorial.html) is used to communicate with the FPGA board in a virtual manner.
 
 <p align="center">
