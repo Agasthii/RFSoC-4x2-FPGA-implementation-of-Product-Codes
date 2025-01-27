@@ -8,5 +8,5 @@ The final implementation for eBCH(256,239,2) product codes reached a data rate o
 3. Binary Symmetric Channel
 4. Decoding block
 
-The implementation is done on RFSoC 4x2 FPGA board and the PYNQ interface is used to communicate with the FPGA board in a virtual manner. [a link](https://pynq.readthedocs.io/en/v2.0/overlay_design_methodology/overlay_tutorial.html)
+The implementation is done on RFSoC 4x2 FPGA board and the [PYNQ interface](https://pynq.readthedocs.io/en/v2.0/overlay_design_methodology/overlay_tutorial.html) is used to communicate with the FPGA board in a virtual manner.
 ![bch_matlab](https://github.com/user-attachments/assets/51ddba50-237d-4fd0-b7a4-9cc627a8bc76)
