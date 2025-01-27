@@ -28,6 +28,10 @@ Each 16 clock cycle set, a product code will be encoded and passed to the channe
 
 The encoding, and channel transmission can be done using pipe-lining. After encoding and passing the encoded product code to the channel, the encoder can start encoding the next product code.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/21bf5760-af43-49ca-8a09-c6b2da231a6b" alt="Alt Text" style="width:50%; height:auto;">
+</p>
+
 The implementation is fully pipelined and consists of four main stages.
 
 1. Codeword generation
