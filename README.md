@@ -8,6 +8,8 @@ Random codewords are generated and fed to the eBCH (256,239) encoder, and a prod
 
 The RFSoC 4x2 board can be easily managed using the PYNQ architecture, which allows to define inputs and obtain outputs using the PYNQ interface. Vivado 2023.1 is used as the main software application for the implementation process.
 
+### Encoding process
+
 BCH codes are a type of block codes, which uses parity bits to encode the message codeword. BCH (255,239) codeword uses 16 parity bits to encode the 239 bit codeword, to make a 255 bit encoded codeword. After adding the extended parity bit, the minimum hamming distance of eBCH(256,239) is increased by 1. The encoding process is implemented in this design to be completed in a single clock cycle.
 
 <p align="center">
