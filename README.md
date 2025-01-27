@@ -1,6 +1,6 @@
 # RFSoC-4x2-FPGA-implementation-of-Product-Codes
 
-In this repository, the implementation of an eBCH(256,239,2) product code encoder and a decoder on an RFSoC4x2 FPGA board is presented. The implementation is optimized to get a low BER rate of 10<sup>-14</sup>, while achieving a high data rate of 76 Gbps.
+In this repository, the implementation of an eBCH(256,239,2) product code encoder and a decoder on an RFSoC4x2 FPGA board is presented. The implementation is optimized to get a low BER rate of 10<sup>-14</sup>, while achieving a high data rate of 76 Gbps. The implementation is done from scratch by implementing each and every block using Verilog.
 
 Forward Error Correction (FEC) techniques, such as block codes, and convolutional codes, make data transmission more efficient by allowing correct errors at the receiver. Bose–Chaudhuri–Hocquenghem (BCH) codes are used in many applications as an FEC technique, due to their lower complexity. The target of the project is achieving a BER of 10<sup>-14</sup> during data transmission. In this project, a high speed FPGA implementation is used to obtain such a low BER value. The FPGA implementation of product codes using extended BCH (eBCH) codes has a code rate of 0.879, and a minimum hamming distance of 36.
 
