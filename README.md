@@ -6,9 +6,9 @@ Forward Error Correction (FEC) techniques, such as block codes, and convolutiona
 
 Random codewords are generated and fed to the eBCH (256,239) encoder, and a product code is obtained by doing both row encoding and column encoding. The encoded product code is then passed through a Binary Symmetric Channel (BSC) under a defined cross-over probability. The received product code is then fed to the decoder to do iterative Bounded Distance Decoding (iBDD) using the Berlekamp–Massey algorithm. The BER of the transmission is then calculated and given as the output.
 
-The RFSoC 4x2 board can be easily managed using the PYNQ architecture, which allows to define inputs and obtain outputs using the PYNQ interface. Vivado 2023.1 is used as the main software application for the implementation process. To obtain a BER of 10<sup>-14</sup>, "insert the number of product codes" product codes have been used.
+The RFSoC 4x2 board can be easily managed using the PYNQ architecture, which allows to define inputs and obtain outputs using the PYNQ interface. Vivado 2023.1 is used as the main software application for the implementation process.
 
-The basic structure of Bose–Chaudhuri–Hocquenghem (BCH) codes is defined in the following figure.
+BCH codes are a type of block codes, which uses parity bits to encode the message codeword. BCH (255,239) codeword uses 16 parity bits to encode the 239 bit codeword, to make a 255 bit encoded codeword. After adding the extended parity bit, the minimum hamming distance of eBCH(256,239) is increased by 1. The encoding process is implemented in this design to be completed in a single clock cycle.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8ea7196b-6524-4592-8615-7c989665ecdd" alt="Alt Text" style="width:50%; height:auto;">
