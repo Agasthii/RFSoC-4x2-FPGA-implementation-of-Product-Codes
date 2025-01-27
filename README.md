@@ -17,6 +17,8 @@ The implementation is fully pipelined and consists of four main stages.
 
 The implementation is done on [RFSoC 4x2](https://www.rfsoc-pynq.io/rfsoc_4x2_overview.html) FPGA board and the [PYNQ interface](https://pynq.readthedocs.io/en/v2.0/overlay_design_methodology/overlay_tutorial.html) is used to communicate with the FPGA board in a virtual manner.
 
+The following figure shows the output compared with the MATLAB simulation and the FPGA implementation for eBCH(256,239,2).
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/51ddba50-237d-4fd0-b7a4-9cc627a8bc76" alt="Alt Text" style="width:50%; height:auto;">
 </p>
