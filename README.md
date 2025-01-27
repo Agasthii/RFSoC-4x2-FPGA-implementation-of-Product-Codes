@@ -1,7 +1,9 @@
 # RFSoC-4x2-FPGA-implementation-of-Product-Codes
 
 The basic structure of Bose–Chaudhuri–Hocquenghem (BCH) codes is defined in the following figure.
-![bch]<div style="text-align:center"><img src="https://github.com/user-attachments/assets/8ea7196b-6524-4592-8615-7c989665ecdd" alt="Alt Text" style="width:50%; height:auto;">
+<p align="center">
+  ![bch]<img src="https://github.com/user-attachments/assets/8ea7196b-6524-4592-8615-7c989665ecdd" alt="Alt Text" style="width:50%; height:auto;">
+</p>
 The final implementation for eBCH(256,239,2) product codes reached a data rate of 76 Gbps. The implementation is fully pipelined and consists of four main stages.
 1. Codeword generation
 2. Encoding block
