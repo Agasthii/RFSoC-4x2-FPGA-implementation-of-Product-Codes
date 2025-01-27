@@ -45,6 +45,18 @@ The complex decoding algorithm for BCH codes is implemented in Verilog while ful
 
 Each of these sections was first implemented in a parameterized manner, then hardcoded for specific eBCH(256,239,2) Product Codes.
 
+### Design blocks
+
+The Verilog code is then used to make an AXI peripheral and inserted as an IP block to the block design.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/012ff23d-d497-44be-957b-015f67c0b317" alt="Alt Text" style="width:50%; height:auto;">
+</p>
+
+The ZYNQ PS is being interacted with using the PYNQ interface to read/write inputs and outputs.
+
+### PYNQ interface
+
 The implementation is done on [RFSoC 4x2](https://www.rfsoc-pynq.io/rfsoc_4x2_overview.html) FPGA board and the [PYNQ interface](https://pynq.readthedocs.io/en/v2.0/overlay_design_methodology/overlay_tutorial.html) is used to communicate with the FPGA board in a virtual manner.
 
 <p align="center">
